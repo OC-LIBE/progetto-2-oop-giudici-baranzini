@@ -30,3 +30,22 @@ if deal_button:
     player.deal(deck)    #attenzione
 st.image([card.image for card in player.hand], width=card_width)
 
+
+## Deal 
+st.button("Deal", help="Let's go gambling!", type="secondary")
+
+## hit
+st.button("Hit", help="+1 card", type="secondary")
+player.hand =+1 card
+
+## stand
+st.button("Stand", help="No more cards, just check!", type="secondary")
+check result
+
+
+
+## x2
+
+## split
+
+## bet
