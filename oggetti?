@@ -1,6 +1,9 @@
 Oggetti:
 Player
     -add_card
+        -id_card
+        -name
+         -profile picture
 Human.Player
     -bet
         -+, -, digitazione numerica

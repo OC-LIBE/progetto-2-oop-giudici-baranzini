@@ -3,6 +3,14 @@ from modules.card import Card
 from modules.deck import Deck
 from modules.player import Player
 
+
+with st.sidebar:
+    tutorial_clicked = st.button("Tutorial")
+if tutorial_clicked:
+    st.title("Video YouTube in Streamlit")
+    youtube_url = "https://www.youtube.com/watch?v=eyoh-Ku9TCI"
+    st.video(youtube_url, start_time=0)
+
 st.set_page_config(
    layout="wide",
 )
@@ -36,11 +44,11 @@ st.button("Deal", help="Let's go gambling!", type="secondary")
 
 ## hit
 st.button("Hit", help="+1 card", type="secondary")
-player.hand =+1 card
+#layer.hand =+1 card
 
 ## stand
 st.button("Stand", help="No more cards, just check!", type="secondary")
-check result
+#heck result
 
 
 
