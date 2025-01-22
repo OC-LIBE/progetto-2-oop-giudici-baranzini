@@ -1,0 +1,31 @@
+Oggetti:
+Player
+    -add_card
+Human.Player
+    -bet
+        -+, -, digitazione numerica
+    -double
+        - Bet x 2
+        - add_card, solo una volta!!
+    -stand
+        -add_card -> false
+Dealer.Player
+(chips)
+    -immage?
+    -value
+Hand
+    -deal
+    -cards_list
+    -score
+        -sum cards_list
+Deck
+    -cards
+        -52 cards
+        -suit
+        -...
+Game
+    -start
+    -quit
+id-card
+    -name
+    -profile picture
