@@ -3,9 +3,9 @@ from modules.hand import Hand
 
 
 class Player:
-    def __init__(self, deck, hand):
-        self.hand:Hand = hand
-        self.deck:Deck = deck
+    def __init__(self):
+        self.hand:Hand = Hand()
+        
 
-    def deal(self):
-        self.hand.deal()
+    def draw_card(self, deck):
+        self.hand.deal(deck)

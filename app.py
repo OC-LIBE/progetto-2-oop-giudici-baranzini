@@ -5,12 +5,12 @@ from modules.hand import Hand
 from modules.player import Player
 
 
-with st.sidebar:
-    tutorial_clicked = st.button("Tutorial")
-if tutorial_clicked:
-    st.title("Video YouTube in Streamlit")
-    youtube_url = "https://www.youtube.com/watch?v=eyoh-Ku9TCI"
-    st.video(youtube_url, start_time=0)
+#with st.sidebar:
+    #tutorial_clicked = st.button("Tutorial")
+#if tutorial_clicked:
+#    st.title("Video YouTube in Streamlit")
+#    youtube_url = "https://www.youtube.com/watch?v=eyoh-Ku9TCI"
+#    st.video(youtube_url, start_time=0)
 
 st.set_page_config(
    layout="wide",
@@ -40,18 +40,18 @@ if deal_button:
     player.deal()    #attenzione
 st.image([card.image for card in player.hand.cards], width=card_width)
 st.write(hand.score)
-st.write(hand.cards_score)
+
 
 
 ## Deal 
-st.button("Deal", help="Let's go gambling!", type="secondary")
+#st.button("Deal", help="Let's go gambling!", type="secondary")
 
 ## hit
-st.button("Hit", help="+1 card", type="secondary")
+#st.button("Hit", help="+1 card", type="secondary")
 #layer.hand =+1 card
 
 ## stand
-st.button("Stand", help="No more cards, just check!", type="secondary")
+#st.button("Stand", help="No more cards, just check!", type="secondary")
 #heck result
 
 
