@@ -1,3 +1,5 @@
+import streamlit as st
+import numpy as np
 from modules.deck import Deck
 from modules.hand import Hand
 
@@ -7,5 +9,5 @@ class Player:
         self.hand:Hand = Hand()
         
 
-    def draw_card(self, deck):
-        self.hand.deal(deck)
+    def deal(self):
+        self.hand.deal()

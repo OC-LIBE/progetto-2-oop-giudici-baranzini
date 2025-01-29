@@ -29,6 +29,7 @@ Deck
 Game
     -start
     -quit
+    -turn
 id-card
     -name
     -profile picture
