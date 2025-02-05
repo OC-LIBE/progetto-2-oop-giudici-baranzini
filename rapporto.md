@@ -5,4 +5,4 @@
 # 22.01.2025
  Oggi abbiamo craeto una lista "oggetti?" dove abbiamo elencato e suddiviso ogni oggetto e le corrispettive sottocategorie, necessarie per il funzionamento del gioco. Inoltre abbiamo iniziato a sviluppare i primi 2 oggetti (hand e player), abbiamo chiarito alcuni aspetti, corretto alcuni errori e aggiunto il pulsante tutorial che è in gardo di mostrare per l'appunto un  video tuttorial.
 # 05.02.2025
- fthht
+ Oggi abbiamo migliorato la sidebar e le funzioni relative all'ID, abbiamo anche corretto e modificato alcuni aspetti di hand, app e abbiamo iniziato a programmare tuttio cio che riguarda il player/dealer.
