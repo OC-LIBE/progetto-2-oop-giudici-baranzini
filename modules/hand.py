@@ -11,8 +11,8 @@ class Hand:
     @property
     def score(self):
         sums = [0,0]
-        for i in range(len(self.cards)):
-            sums[0] =+ self.cards[i].card_scores[0]
-            sums[1] =+ self.cards[i].card_scores[1]
+        for card in self.cards:
+            sums[0] += card.card_scores[0]
+            sums[1] += card.card_scores[1]
 
         return sums 

@@ -7,5 +7,12 @@ class Player:
         self.hand:Hand = Hand()
         
 
-    def draw_card(self):
-        self.hand.deal()
+    def draw_card(self, deck):
+        self.hand.add_card(deck)
+
+
+class Human_player(Player):
+    pass
+
+class Dealer(Player):
+    pass
