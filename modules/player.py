@@ -7,23 +7,21 @@ class Player:
         self.hand:Hand = Hand()
         
 
-    def draw_card(self):
-        self.hand.deal()
+    def draw_card(self,deck):
+        self.hand.add_card(deck)
+
+class Human_player(Player):
+    def __init__(self):
+        super().__init__()
+
 
 class Dealer(Player):
     def __init__(self):
         super().__init__() 
 
-    def play(self):
-        while [0; 1]
-        if self.hand.score[0] < 17:
-            pass
-        if self.hand.score[1] < 17:
-            pass 
-        if self.hand.score[0] > 21:
-            pass
-        if self.hand.score[1] > 21:
-            pass
-        else:
-            pass
+    def play(self,deck):
+        while self.hand.score[0] < 17:
+            while self.hand.score[1] < 17 or self.hand.score[1] > 21:    #attenzione
+                self.draw_card(deck) 
+        
        

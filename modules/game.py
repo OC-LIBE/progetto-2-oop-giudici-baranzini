@@ -7,6 +7,22 @@ class Game:
         self.dealer: Dealer = Dealer()
         self.human_player: Human_player = Human_player()
         self.state = 1
+
+    def begin_game(self):
+        self.human_player.draw_card(self.deck) 
+        self.dealer.draw_card(self.deck)
+        self.human_player.draw_card(self.deck) 
+        self.dealer.draw_card(self.deck)
+
+    def hit(self):
+        self.human_player.draw_card(self.deck)
+
+    def dealer_play(self):
+        self.dealer.play(self.deck)
+    
+"""
+import streamlit as st
+# Inizializza variabili di sessione con un'unica funzione
     
 
 def init_session_state():
@@ -92,3 +108,4 @@ if st.session_state.show_game:
 
 if st.session_state.nickname:
     st.write(f"👤 **Nickname:** {st.session_state.nickname}")
+"""
