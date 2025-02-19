@@ -160,3 +160,4 @@ if st.session_state.show_game:
 if st.session_state.nickname:
     nickname_color = color_options.get(st.session_state.selected_color, "#000000")
     st.markdown(f"<p style='color:{nickname_color}; font-weight:bold; font-size:20px;'>👤 {st.session_state.nickname}</p>", unsafe_allow_html=True)
+

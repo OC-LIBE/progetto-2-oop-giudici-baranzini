@@ -1,4 +1,22 @@
 import streamlit as st
+from streamlit_extras.let_it_rain import rain
+
+st.title("Pioggia di Emoji Regolabile")
+
+# Slider per regolare l'intensità
+intensita = st.slider("Regola l'intensità della pioggia", 1, 10, 100)
+
+if st.button("Fai piovere emoji!"):
+    st.write("Sta piovendo denaro! 💰💸")
+    rain(
+        emoji="💰",
+        font_size=54,
+        falling_speed=intensita,
+        animation_length=5,
+    )
+else:
+    st.write("Premi il bottone per far piovere denaro!")
+
 # Title of the app
 st.title("🃏 Blackjack Game Rules")
 

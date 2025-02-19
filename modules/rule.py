@@ -1,5 +1,8 @@
 import streamlit as st
-class Rules:
+if st.button("Fai piovere soldi!"):
+    st.snow()
+    st.write("Sta piovendo denaro! 💰💸")
+'''class Rules:
     # Title of the app
     st.title("🃏 Blackjack Game Rules")
 
@@ -67,3 +70,4 @@ class Rules:
     st.markdown("---")
     st.markdown("Enjoy your game of Blackjack! 🎲")
 
+'''
