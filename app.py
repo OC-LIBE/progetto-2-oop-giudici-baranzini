@@ -2,13 +2,6 @@ import streamlit as st
 from modules.game import Game
 
 
-#with st.sidebar:
-    #tutorial_clicked = st.button("Tutorial")
-#if tutorial_clicked:
-#    st.title("Video YouTube in Streamlit")
-#    youtube_url = "https://www.youtube.com/watch?v=eyoh-Ku9TCI"
-#    st.video(youtube_url, start_time=0)
-
 st.set_page_config(
    layout="wide",
 )
@@ -47,24 +40,3 @@ st.image([card.image for card in game.dealer.hand.cards], width=card_width)
 st.write(game.human_player.hand.score())
 st.write(game.dealer.hand.score())
 
-
-
-
-## Deal 
-#st.button("Deal", help="Let's go gambling!", type="secondary")
-
-## hit
-#st.button("Hit", help="+1 card", type="secondary")
-#layer.hand =+1 card
-
-## stand
-#st.button("Stand", help="No more cards, just check!", type="secondary")
-#heck result
-
-
-
-## x2
-
-## split
-
-## bet

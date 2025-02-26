@@ -1,4 +1,5 @@
-Oggetti:
+Oggetti.
+
 Player
     -add_card
         -id_card
@@ -33,8 +34,5 @@ Game
 id-card
     -name
     -profile picture
-import streamlit as st
 
-if st.button("Fai piovere soldi!"):
-    st.snow()
-    st.write("Sta piovendo denaro! 💰💸")
+import
