@@ -43,8 +43,9 @@ if play_button:
 
 st.image([card.image for card in game.human_player.hand.cards], width=card_width)
 st.image([card.image for card in game.dealer.hand.cards], width=card_width)
-st.write(game.human_player.hand.score)
-st.write(game.dealer.hand.score)
+
+st.write(game.human_player.hand.score())
+st.write(game.dealer.hand.score())
 
 
 

@@ -7,7 +7,6 @@ class Hand:
     def add_card(self, deck):
         self.cards.append(deck.draw())
 
-    @property
     def score(self):
         sums = [0,0]
         for card in self.cards:
