@@ -13,6 +13,11 @@ class Player:
 class Human_player(Player):
     def __init__(self):
         super().__init__()
+        self.wallet:int = 1000
+    
+    def bet(self, bet_ammount):
+        self.wallet -= bet_ammount
+
 
 
 class Dealer(Player):
@@ -29,12 +34,3 @@ class Dealer(Player):
 
             else:
                 break
-    
-
-
-            
-
-                
-            
-        
-       

@@ -34,9 +34,25 @@ play_button = st.button("play")
 if play_button:
       game.dealer_play()
 
+@st.dialog("bet")
+def place_bet():
+    with st.form("bet", clear_on_submit = True):
+        st.write("place a bet")
+        bet_ammount = st.slider("💰 Place a bet", min_value=0, max_value=game.human_player.wallet, step=10,)
+        
+        submitted = st.form_submit_button("place the bet")
+        if submitted:
+            game.bet(bet_ammount)
+            st.rerun()
+
+if st.button("bet"):
+    place_bet()
+
+
 st.image([card.image for card in game.human_player.hand.cards], width=card_width)
 st.image([card.image for card in game.dealer.hand.cards], width=card_width)
 
 st.write(game.human_player.hand.score())
 st.write(game.dealer.hand.score())
-
+st.write(game.human_player.wallet)
+st.write(game.money_betted)

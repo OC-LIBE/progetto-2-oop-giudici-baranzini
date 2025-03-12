@@ -7,6 +7,7 @@ class Game:
         self.dealer: Dealer = Dealer()
         self.human_player: Human_player = Human_player()
         self.state = 1
+        self.money_betted: int = 0
 
     def begin_game(self):
         self.human_player.draw_card(self.deck) 
@@ -19,3 +20,10 @@ class Game:
 
     def dealer_play(self):
         self.dealer.play(self.deck)
+
+    def bet(self, bet_ammount):
+        self.human_player.bet(bet_ammount)
+        self.money_betted += bet_ammount
+
+    def control(self):
+        pass
