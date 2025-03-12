@@ -23,3 +23,4 @@ st.button("Stand", help="No more cards, just check!")
 st.button("split", help="split your hand")
 
 st.button("double", help="get only one more card and double the bet")
+    
