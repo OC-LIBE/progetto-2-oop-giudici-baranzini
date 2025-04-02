@@ -10,6 +10,7 @@ class Game:
         self.money_betted: int = 0
 
     def begin_game(self):
+        self.deck.shuffle()
         self.human_player.draw_card(self.deck) 
         self.dealer.draw_card(self.deck)
         self.human_player.draw_card(self.deck) 

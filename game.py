@@ -4,8 +4,8 @@ from rule import rl
 def init_session_state():
     """Initialize session state variables with default values."""
     defaults = {
-        "show_game": False,
-        "show_profile": False,
+        "show_game": True,
+        "show_profile": True,
         "nickname": "",
         "game_started": False,
         "bet_value": 100,
