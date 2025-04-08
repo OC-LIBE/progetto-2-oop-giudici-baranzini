@@ -67,11 +67,16 @@ if stand_button:
     game.dealer_play()
     game.control()
 
-st.write("Yuor hand")
+st.write("Your hand:")
 st.image([card.image for card in game.human_player.hand.cards], width=card_width)
 
-st.write("Desler's hand")
+st.write("Desler's hand:")
 st.image([card.image for card in game.dealer.hand.cards], width=card_width)
+
+next_hand_button = st.button("Next hand")
+if next_hand_button:
+    place_bet()
+    game.next_hand()
 
 st.write(game.human_player.hand.score())
 st.write(game.dealer.hand.score())
