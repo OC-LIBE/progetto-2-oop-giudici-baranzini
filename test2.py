@@ -1,6 +1,6 @@
 import streamlit as st
 from modules.game import Game
-from modules.rule import rl
+from streamlit_extras.let_it_rain import rain
 
 
 st.set_page_config(
@@ -111,24 +111,42 @@ def place_bet():
             game.bet(bet_ammount)
             st.rerun()
 
-deal_button = st.button("Begin game")
-if deal_button:
-      place_bet()
-      game.begin_game()
+begin_button = st.button("Begin game")
+if begin_button:
+    place_bet()
+    game.begin_game()
+
+st.write("Your hand:")
+st.image([card.image for card in game.human_player.hand.cards], width=card_width)
+st.write(f"You have {game.human_player.wallet} money left")
 
 hit_button = st.button("Hit")
 if hit_button:
     game.hit()
+    st.rerun()
 
 stand_button = st.button("Stand")
 if stand_button:
     game.dealer_play()
     game.control()
+    if game.victory == True:
+        rain(
+            emoji="💸",
+            font_size=54,
+            falling_speed=10,
+            animation_length=5,
+            )
+        
+    else:
+        rain(
+            emoji="😭",
+            font_size=54,
+            falling_speed=10,
+            animation_length=5,
+            )
+     
 
-st.write("Your hand:")
-st.image([card.image for card in game.human_player.hand.cards], width=card_width)
-
-st.write("Desler's hand:")
+st.write("Dealer's hand:")
 st.image([card.image for card in game.dealer.hand.cards], width=card_width)
 
 next_hand_button = st.button("Next hand")
@@ -136,7 +154,7 @@ if next_hand_button:
     place_bet()
     game.next_hand()
 
-st.write(game.human_player.hand.score())
-st.write(game.dealer.hand.score())
-st.write(game.human_player.wallet)
-st.write(game.money_betted)
+#st.write(game.human_player.hand.score())
+#st.write(game.dealer.hand.score())
+#st.write(game.human_player.wallet)
+#st.write(game.money_betted)

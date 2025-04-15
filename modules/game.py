@@ -6,8 +6,8 @@ class Game:
         self.deck: Deck = Deck(number_of_decks)
         self.dealer: Dealer = Dealer()
         self.human_player: Human_player = Human_player()
-        self.state = 1
         self.money_betted: int = 0
+        self.victory:bool = False
 
     def begin_game(self):
         self.deck.shuffle()
@@ -36,58 +36,57 @@ class Game:
 
     def control(self):
 
-        if self.dealer.hand.score()[0] > 21 and self.human_player.hand.score()[0] > 21:
-            print("Pareggio.")
-            self.human_player.wallet += self.money_betted
+        if self.human_player.hand.score()[0] > 21:
+            #print("Il giocatore ha sballato! Ha perso.")
             self.money_betted = 0
-
-        elif self.human_player.hand.score()[0] > 21:
-            print("Il giocatore ha sballato! Ha perso.")
-            self.money_betted = 0
+            self.victory = False
 
         elif self.dealer.hand.score()[0] > 21:
-            print("Il mazziere ha sballato! Il giocatore vince.")
+            #print("Il mazziere ha sballato! Il giocatore vince.")
             self.human_player.wallet += self.money_betted*2
             self.money_betted = 0
+            self.victory = True
 
         elif self.dealer.hand.score()[1] <= 21:
 
             if self.dealer.hand.score()[1] < self.human_player.hand.score()[0] and self.human_player.hand.score()[0] <= 21:
-                print("Il giocatore vince.")
+                #print("Il giocatore vince.")
                 self.human_player.wallet += self.money_betted*2
                 self.money_betted = 0
+                self.victory = True
 
             elif self.dealer.hand.score()[1] < self.human_player.hand.score()[1] and self.human_player.hand.score()[1] <= 21:
-                print("Il giocatore vince.")
+                #print("Il giocatore vince.")
                 self.human_player.wallet += self.money_betted*2
                 self.money_betted = 0
+                self.victory = True
 
             else:
-                print("Il giocatore ha perso.")
+                #print("Il giocatore ha perso.")
                 self.money_betted = 0
+                self.victory = False
 
         elif self.dealer.hand.score()[0] <= 21 and self.dealer.hand.score()[1] > 21:
 
             if self.dealer.hand.score()[0] < self.human_player.hand.score()[0] and self.human_player.hand.score()[0] <= 21:
-                print("Il giocatore vince.")
+                #print("Il giocatore vince.")
                 self.human_player.wallet += self.money_betted*2
                 self.money_betted = 0
+                self.victory = True
 
             elif self.dealer.hand.score()[0] < self.human_player.hand.score()[1] and self.human_player.hand.score()[1] <= 21:
-                print("Il giocatore vince.")
+                #print("Il giocatore vince.")
                 self.human_player.wallet += self.money_betted*2
                 self.money_betted = 0
+                self.victory = True
 
             else:
-                print("Il giocatore ha perso.")
+                #print("Il giocatore ha perso.")
                 self.money_betted = 0
-
-        elif self.dealer.hand.score()[0] > 21 and self.human_player.hand.score()[0] > 21:
-            print("Pareggio.")
-            self.human_player.wallet += self.money_betted
-            self.money_betted = 0
+                self.victory = False
 
         else:
-            print("Il giocatore ha perso.")
+            #print("Il giocatore ha perso.")
             self.money_betted = 0
+            self.victory = False
             
