@@ -127,6 +127,7 @@ if hit_button:
 
 stand_button = st.button("Stand")
 if stand_button:
+    rain_lenght = 1
     game.dealer_play()
     game.control()
     if game.victory == True:
@@ -134,7 +135,7 @@ if stand_button:
             emoji="💸",
             font_size=54,
             falling_speed=10,
-            animation_length=5,
+            animation_length=rain_lenght,
             )
         
     else:
@@ -142,8 +143,9 @@ if stand_button:
             emoji="😭",
             font_size=54,
             falling_speed=10,
-            animation_length=5,
+            animation_length=rain_lenght,
             )
+        
      
 
 st.write("Dealer's hand:")

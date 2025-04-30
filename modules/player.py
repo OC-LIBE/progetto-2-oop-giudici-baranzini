@@ -25,8 +25,8 @@ class Dealer(Player):
         super().__init__() 
 
     def play(self,deck):
-        while self.hand.score()[0] < 16:
-            if self.hand.score()[1] < 16:
+        while self.hand.score()[0] < 17:
+            if self.hand.score()[1] < 17:
                 self.draw_card(deck)
 
             elif self.hand.score()[1] > 21:
